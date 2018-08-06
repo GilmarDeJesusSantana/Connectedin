@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>ConnectedIn</title>
+	</head>
+	<body>
+		<h1>Bem Vindo ao Connectedin!!</h1>
+		{%if perfis%}
+		<ul>
+			{%for perfil in perfis %}
+			<li>
+				<a href="{%url 'exibir' perfil.id%}" >{{perfil.nome}} / {{pefil.email}}></a>
+				
+				
+				{{perfil.nome}} /{{perfil.email}} </li>
+			{%endfor%}
+		</ul>
+		{%else%}
+		<p>Nenhum Perfil encontrado</p>
+		{%endif%}
+	</body>
+</html>
